@@ -2,7 +2,8 @@ use directories::ProjectDirs;
 use std::path::PathBuf;
 
 pub fn get_directory() -> PathBuf {
-    let dirs = ProjectDirs::from("com", "ByteAfterByte", "RustyPass").expect("Could not determine the application data directory.");
+    let dirs = ProjectDirs::from("com", "ByteAfterByte", "RustyPass")
+        .expect("Could not determine the application data directory.");
 
     let data_directory = dirs.data_dir();
 

@@ -12,16 +12,16 @@ pub struct Cli {
 pub enum Commands {
     // Initialized the password vault and sets up the master password.
     Init,
-    
+
     // Generates a new password and saves it to the database.
     Generate {
         length: usize,
         website: String,
         username: String,
-        
+
         #[arg(short = 'n', long)]
         numbers: bool,
-        
+
         #[arg(short = 's', long)]
         symbols: bool,
     },
